@@ -27,7 +27,7 @@ class MyBot(commands.Bot):
             "cogs.welcome.hello",
             "cogs.welcome.say",
             "cogs.welcome.who_are_you",
-            "cogs.Spotify.spotify",
+            #"cogs.Spotify.spotify",
             "cogs.games.yahtzee",
             #"cogs.economy.pay",
             #"cogs.gamble.slot"
@@ -149,6 +149,11 @@ async def name_change():
     #interaction: discord.Interaction):
     #await interaction.response.send_message(
         #f"lolol")
+
+async def dontcrash():
+    channels = bot.get_all_channels()
+    await asyncio.sleep(45)
+    print("Channels have been refreshed!")
 
 bot = MyBot()
 bot.run(TOKEN)
